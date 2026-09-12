@@ -65,26 +65,23 @@ namespace Assignment04
          //   Console.WriteLine(prices.Length);
           // #endregion
 
-          
+            
             // Assignment 5 
-           
+            
 
             // #region Function Parameter Passing - Question 1
             // #endregion
 
             // #region Function Parameter Passing - Question 2
-            // PrintBookInfo("Clean Code");
-            // PrintBookInfo("Design Patterns", 450);
             // #endregion
 
-            #region Function Parameter Passing - Question 3
-            // 3-Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
-            PrintBookInfo(pages: 500, title: "Refactoring");
+            // #region Function Parameter Passing - Question 3
+            // #endregion
+
+            #region Function Parameter Passing - Question 4
+            // 4-Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. Call it with three book titles.
+            PrintAllTitles("Clean Code", "Design Patterns", "C# in Depth");
             #endregion
-
-            // #region Function Parameter Passing - Question 4
-            // PrintAllTitles("Clean Code", "Design Patterns", "C# in Depth");
-            // #endregion
 
             // #region Access Modifiers - Question 1
             // Book myBook1 = new Book();
@@ -102,9 +99,12 @@ namespace Assignment04
             // #endregion
         }
 
-        static void PrintBookInfo(string title, int pages = 300)
+        static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine($"Title: {title}, Pages: {pages}");
+            foreach (var title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
     }
 }
