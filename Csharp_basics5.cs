@@ -78,33 +78,25 @@ namespace Assignment04
             // #region Function Parameter Passing - Question 3
             // #endregion
 
-            #region Function Parameter Passing - Question 4
-            // 4-Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. Call it with three book titles.
-            PrintAllTitles("Clean Code", "Design Patterns", "C# in Depth");
-            #endregion
-
-            // #region Access Modifiers - Question 1
-            // Book myBook1 = new Book();
+            // #region Function Parameter Passing - Question 4
             // #endregion
 
+            #region Access Modifiers - Question 1
+            // 1-Add a private string password = "secret"; field to a Book class. Try to print it from Main (outside the class). What happens, and why?
+            Book myBook1 = new Book();
+            // Console.WriteLine(myBook1.password); // Compilation Error!
+
+            /*
+             * What happens: Compilation error occurs ('Book.password' is inaccessible due to its protection level).
+             * Why: The 'private' access modifier restricts member accessibility strictly to within the same class body where it is declared.
+             */
+            #endregion
+
             // #region Access Modifiers - Question 2
-            // Book myBook2 = new Book();
-            // Console.WriteLine(myBook2.copiesInStock);
             // #endregion
 
             // #region Access Modifiers - Question 3
-            // Book myBook3 = new Book();
-            // myBook3.Title = "Clean Architecture";
-            // Console.WriteLine(myBook3.Title);
             // #endregion
-        }
-
-        static void PrintAllTitles(params string[] titles)
-        {
-            foreach (var title in titles)
-            {
-                Console.WriteLine(title);
-            }
         }
     }
 }
