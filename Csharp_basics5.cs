@@ -35,11 +35,18 @@ namespace Assignment04
             // Console.WriteLine(pages);
            // #endregion
 
-           #region Question 6
+           // #region Question 6
             // 6-Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it with double[] prices = { 25.5, 40.0 };
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine(prices[0]);
+            // double[] prices = { 25.5, 40.0 };
+            // ApplyDiscount(prices);
+            // Console.WriteLine(prices[0]);
+           // #endregion
+
+           #region Question 7
+            // 7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            int pages = 400;
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages);
            #endregion
         }
 
@@ -58,9 +65,14 @@ namespace Assignment04
         //     pages += 50;
         // }
 
-        static void ApplyDiscount(double[] prices)
+        // static void ApplyDiscount(double[] prices)
+        // {
+        //     prices[0] -= 5;
+        // }
+
+        static void AddBonusPagesByRef(ref int pages)
         {
-            prices[0] -= 5;
+            pages += 50;
         }
     }
 }
