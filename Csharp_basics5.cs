@@ -66,7 +66,7 @@ namespace Assignment04
           // #endregion
 
             
-            // Assignment 5 Regions
+            // Assignment 5
             
 
             // #region Function Parameter Passing - Question 1
@@ -84,20 +84,15 @@ namespace Assignment04
             // #region Access Modifiers - Question 1
             // #endregion
 
-            #region Access Modifiers - Question 2
-            // 2-Add an internal int copiesInStock = 5; field to Book. Print it from Main. Does it compile? Why?
-            Book myBook2 = new Book();
-            Console.WriteLine(myBook2.copiesInStock);
-
-            /*
-             * Does it compile?: Yes, it compiles and prints 5.
-             * Why: The 'internal' access modifier allows access from any code within the same assembly (project/executable). 
-             * Since 'Program' and 'Book' are in the same assembly, 'copiesInStock' is accessible.
-             */
-            #endregion
-
-            // #region Access Modifiers - Question 3
+            // #region Access Modifiers - Question 2
             // #endregion
+
+            #region Access Modifiers - Question 3
+            // 3-Add a public string Title; field to Book. Set it and print it from Main.
+            Book myBook3 = new Book();
+            myBook3.Title = "Clean Architecture";
+            Console.WriteLine(myBook3.Title);
+            #endregion
         }
     }
 }
