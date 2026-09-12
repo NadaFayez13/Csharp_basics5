@@ -65,30 +65,22 @@ namespace Assignment04
          //   Console.WriteLine(prices.Length);
           // #endregion
 
-            // ==========================================
-            // Assignment 5 Regions
-            // ==========================================
+          
+            // Assignment 5 
+           
 
             // #region Function Parameter Passing - Question 1
-            // if (TryGetPrice("Clean Code", out double bookPrice))
-            // {
-            //     Console.WriteLine($"Price: {bookPrice}");
-            // }
-            // else
-            // {
-            //     Console.WriteLine("Book not found!");
-            // }
             // #endregion
 
-            #region Function Parameter Passing - Question 2
-            // 2-Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call it once with only a title, and once passing both a title and pages.
-            PrintBookInfo("Clean Code");
-            PrintBookInfo("Design Patterns", 450);
+            // #region Function Parameter Passing - Question 2
+            // PrintBookInfo("Clean Code");
+            // PrintBookInfo("Design Patterns", 450);
+            // #endregion
+
+            #region Function Parameter Passing - Question 3
+            // 3-Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
+            PrintBookInfo(pages: 500, title: "Refactoring");
             #endregion
-
-            // #region Function Parameter Passing - Question 3
-            // PrintBookInfo(pages: 500, title: "Refactoring");
-            // #endregion
 
             // #region Function Parameter Passing - Question 4
             // PrintAllTitles("Clean Code", "Design Patterns", "C# in Depth");
@@ -110,23 +102,9 @@ namespace Assignment04
             // #endregion
         }
 
-        // static bool TryGetPrice(string title, out double price)
-        // {
-        //     price = title == "Clean Code" ? 25.5 : 0;
-        //     return title == "Clean Code";
-        // }
-
         static void PrintBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"Title: {title}, Pages: {pages}");
         }
-
-        // static void PrintAllTitles(params string[] titles)
-        // {
-        //     foreach (var title in titles)
-        //     {
-        //         Console.WriteLine(title);
-        //     }
-        // }
     }
 }
