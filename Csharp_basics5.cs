@@ -1,7 +1,16 @@
 using System;
 
+// assignment 5
 namespace Assignment04
 {
+    // Helper class for Access Modifiers questions
+    public class Book
+    {
+        private string password = "secret";
+        internal int copiesInStock = 5;
+        public string Title;
+    }
+
     internal class Program
     {
         static void Main(string[] args)
@@ -49,14 +58,66 @@ namespace Assignment04
             // Console.WriteLine(pages);
            // #endregion
 
-           #region Question 8
+          // #region Question 8
             // 8-Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }.
-            double[] prices = { 25.5, 40.0 };
-            ReplaceArray(ref prices);
-            Console.WriteLine(prices.Length);
-           #endregion
+         //   double[] prices = { 25.5, 40.0 };
+         //   ReplaceArray(ref prices);
+         //   Console.WriteLine(prices.Length);
+          // #endregion
+
+            
+            // Assignment 5 Regions (Added below)
+            
+
+            #region Function Parameter Passing - Question 1
+            // 1-Write a method bool TryGetPrice(string title, out double price) that returns true and sets price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0. Call it and print the price if found.
+            if (TryGetPrice("Clean Code", out double bookPrice))
+            {
+                Console.WriteLine($"Price: {bookPrice}");
+            }
+            else
+            {
+                Console.WriteLine("Book not found!");
+            }
+            #endregion
+
+            // #region Function Parameter Passing - Question 2
+            // // 2-Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call it once with only a title, and once passing both a title and pages.
+            // PrintBookInfo("Clean Code");
+            // PrintBookInfo("Design Patterns", 450);
+            // #endregion
+
+            // #region Function Parameter Passing - Question 3
+            // // 3-Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
+            // PrintBookInfo(pages: 500, title: "Refactoring");
+            // #endregion
+
+            // #region Function Parameter Passing - Question 4
+            // // 4-Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. Call it with three book titles.
+            // PrintAllTitles("Clean Code", "Design Patterns", "C# in Depth");
+            // #endregion
+
+            // #region Access Modifiers - Question 1
+            // // 1-Add a private string password = "secret"; field to a Book class. Try to print it from Main (outside the class). What happens, and why?
+            // Book myBook1 = new Book();
+            // // Console.WriteLine(myBook1.password); 
+            // #endregion
+
+            // #region Access Modifiers - Question 2
+            // // 2-Add an internal int copiesInStock = 5; field to Book. Print it from Main. Does it compile? Why?
+            // Book myBook2 = new Book();
+            // Console.WriteLine(myBook2.copiesInStock);
+            // #endregion
+
+            // #region Access Modifiers - Question 3
+            // // 3-Add a public string Title; field to Book. Set it and print it from Main.
+            // Book myBook3 = new Book();
+            // myBook3.Title = "Clean Architecture";
+            // Console.WriteLine(myBook3.Title);
+            // #endregion
         }
 
+        // Assignment 04 Methods (Commented out)
         // static void PrintWelcomeMessage()
         // {
         //     Console.WriteLine("Welcome to the Library!");
@@ -82,9 +143,37 @@ namespace Assignment04
         //     pages += 50;
         // }
 
-        static void ReplaceArray(ref double[] prices)
+        // static void ReplaceArray(ref double[] prices)
+        // {
+        //     prices = new double[] { 10.0, 12.5, 15.0 };
+        // }
+
+        // Assignment 05 Methods
+        static bool TryGetPrice(string title, out double price)
         {
-            prices = new double[] { 10.0, 12.5, 15.0 };
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
         }
+
+        // static void PrintBookInfo(string title, int pages = 300)
+        // {
+        //     Console.WriteLine($"Title: {title}, Pages: {pages}");
+        // }
+
+        // static void PrintAllTitles(params string[] titles)
+        // {
+        //     foreach (var title in titles)
+        //     {
+        //         Console.WriteLine(title);
+        //     }
+        // }
     }
 }
