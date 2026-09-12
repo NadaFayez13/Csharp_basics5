@@ -66,7 +66,7 @@ namespace Assignment04
           // #endregion
 
             
-            // Assignment 5 
+            // Assignment 5 Regions
             
 
             // #region Function Parameter Passing - Question 1
@@ -81,19 +81,20 @@ namespace Assignment04
             // #region Function Parameter Passing - Question 4
             // #endregion
 
-            #region Access Modifiers - Question 1
-            // 1-Add a private string password = "secret"; field to a Book class. Try to print it from Main (outside the class). What happens, and why?
-            Book myBook1 = new Book();
-            // Console.WriteLine(myBook1.password); // Compilation Error!
+            // #region Access Modifiers - Question 1
+            // #endregion
+
+            #region Access Modifiers - Question 2
+            // 2-Add an internal int copiesInStock = 5; field to Book. Print it from Main. Does it compile? Why?
+            Book myBook2 = new Book();
+            Console.WriteLine(myBook2.copiesInStock);
 
             /*
-             * What happens: Compilation error occurs ('Book.password' is inaccessible due to its protection level).
-             * Why: The 'private' access modifier restricts member accessibility strictly to within the same class body where it is declared.
+             * Does it compile?: Yes, it compiles and prints 5.
+             * Why: The 'internal' access modifier allows access from any code within the same assembly (project/executable). 
+             * Since 'Program' and 'Book' are in the same assembly, 'copiesInStock' is accessible.
              */
             #endregion
-
-            // #region Access Modifiers - Question 2
-            // #endregion
 
             // #region Access Modifiers - Question 3
             // #endregion
