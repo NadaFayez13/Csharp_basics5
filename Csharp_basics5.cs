@@ -28,11 +28,18 @@ namespace Assignment04
             // PrintBookTitle("Clean Code");
            // #endregion
 
-           #region Question 5
+           // #region Question 5
             // 5-Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and print pages afterward.
-            int pages = 400;
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
+            // int pages = 400;
+            // AddBonusPages(pages);
+            // Console.WriteLine(pages);
+           // #endregion
+
+           #region Question 6
+            // 6-Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it with double[] prices = { 25.5, 40.0 };
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]);
            #endregion
         }
 
@@ -46,9 +53,14 @@ namespace Assignment04
         //     Console.WriteLine("Book title: " + title);
         // }
 
-        static void AddBonusPages(int pages)
+        // static void AddBonusPages(int pages)
+        // {
+        //     pages += 50;
+        // }
+
+        static void ApplyDiscount(double[] prices)
         {
-            pages += 50;
+            prices[0] -= 5;
         }
     }
 }
