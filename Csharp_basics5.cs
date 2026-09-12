@@ -42,11 +42,18 @@ namespace Assignment04
             // Console.WriteLine(prices[0]);
            // #endregion
 
-           #region Question 7
+           // #region Question 7
             // 7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
-            int pages = 400;
-            AddBonusPagesByRef(ref pages);
-            Console.WriteLine(pages);
+            // int pages = 400;
+            // AddBonusPagesByRef(ref pages);
+            // Console.WriteLine(pages);
+           // #endregion
+
+           #region Question 8
+            // 8-Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }.
+            double[] prices = { 25.5, 40.0 };
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
            #endregion
         }
 
@@ -70,9 +77,14 @@ namespace Assignment04
         //     prices[0] -= 5;
         // }
 
-        static void AddBonusPagesByRef(ref int pages)
+        // static void AddBonusPagesByRef(ref int pages)
+        // {
+        //     pages += 50;
+        // }
+
+        static void ReplaceArray(ref double[] prices)
         {
-            pages += 50;
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
     }
 }
